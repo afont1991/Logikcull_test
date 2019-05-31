@@ -7,15 +7,18 @@ export default {
     xl: `@media screen and (min-width: 1200px)`,
   },
   colors: {
-    blue: ["#30abdf", "#358ED1", "#4298e8", "#4763C0"],
-    green: ["#c5f9c6", "#05c605", "#129d20"],
-    grey: ["#f0f0f2", "#999", "#474747", "#323232", "#272b34"],
-    purple: "#9459ff",
-    red: ["#fccdcd", "#ed2528", "#d30000"],
-    transparent: "rgba(0,0,0,0)",
-    white: "#fff",
+    logikcullTransparentBackground: "rgba(232,242,248,.6)",
+    logikcullTransparentBackground_2: "rgba(232,242,248,.9)",
+    logikcullButtonBlue: "#306e83",
+    logikcullButtonBlue_hover: "#4691a9",
+    logikcullButtonRed: "#c2493d",
+    logikcullButtonRed_hover: "#e75243",
+    logikcullText: "#555",
+    logikcullTextDarkBlue: "#2b3e50",
+    logikcullTextLightBlue: "#4691a9",
+    conditionColors: ["#05c605", "#72df72", "#808080", "#ffa500", "#d30000"]
   },
   fonts: "'Roboto', sans-serif",
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-};;
+};

@@ -1,30 +1,51 @@
 
 // Action types
-import { IS_LOADING, IS_READY } from "./actions";
+import { SET_RAW_ALBUM_DATA, SET_NORMALIZED_ALBUM_DATA, SET_ALBUM_DETAILS } from "./actions";
 
-const initialState = {};
+// Default state
+const initialState = {
 
+  albumDataRaw: null,
+  albumDataNormalized: null,
+  albumDetailsFromLastFm: {},
+
+};
+
+// Reducer
 export default (state = initialState, action) => {
   switch (action.type) {
 
-    case IS_LOADING: {
+    case SET_RAW_ALBUM_DATA: {
 
-      const { name } = action.payload;
+      const { data } = action.payload;
 
       return {
         ...state,
-        [name]: false,
+        albumDataRaw: {...data},
       };
+
     }
 
-    case IS_READY: {
+    case SET_NORMALIZED_ALBUM_DATA: {
 
-      const { name } = action.payload;
+      const { data } = action.payload;
 
       return {
         ...state,
-        [name]: true,
+        albumDataNormalized: {...data},
       };
+
+    }
+
+    case SET_ALBUM_DETAILS: {
+
+      const { details } = action.payload;
+
+      return {
+        ...state,
+        albumDetailsFromLastFm: {...details}
+      }
+
     }
 
     default:

@@ -30,6 +30,7 @@ module.exports = {
         loader: "eslint-loader"
       },
       { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: "babel-loader" },
+      { test: /\.(png|svg|jpe?g|gif|woff|woff2|eot|ttf|otf)$/, loader: "file-loader" },
       {
         test: /\.(css|sass|scss)$/,
         use: [
@@ -44,10 +45,6 @@ module.exports = {
             }
           }
         ]
-      },
-      {
-        test: /\.(png|svg|jpe?g|gif|woff|woff2|eot|ttf|otf)$/,
-        loader: "file-loader"
       },
       { test: /\.html$/, loader: "html-loader?attrs[]=video:src" },
       { test: /\.mp4$/, loader: "url-loader?mimetype=video/mp4" },
